@@ -12,5 +12,6 @@ function(add_sample_directory whatIsBuilding)
 			   FOLDER "uMQTT_Samples")
 endfunction()
 
-add_sample_directory(mqtt_client_sample)
-
+if (NOT ${nucleus})
+    add_sample_directory(mqtt_client_sample)
+endif()
